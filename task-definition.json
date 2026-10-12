@@ -1,18 +1,50 @@
 {
+    "family": "loan_app_task",
+    "containerDefinitions": [
+        {
+            "name": "loan_app_container",
+            "image": "950742489845.dkr.ecr.us-west-2.amazonaws.com/flask_loan_app:latest",
+            "cpu": 0,
+            "portMappings": [
+                {
+                    "containerPort": 80,
+                    "hostPort": 80,
+                    "protocol": "tcp",
+                    "name": "loan_app_container-80-tcp",
+                    "appProtocol": "http"
+                }
+            ],
+            "essential": true,
+            "environment": [],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "ulimits": [],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "/ecs/loan_app_task",
+                    "awslogs-create-group": "true",
+                    "awslogs-region": "us-west-2",
+                    "awslogs-stream-prefix": "ecs"
+                },
+                "secretOptions": []
+            },
+            "systemControls": []
+        }
+    ],
+    "executionRoleArn": "arn:aws:iam::950742489845:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "volumes": [],
+    "placementConstraints": [],
     "requiresCompatibilities": [
         "FARGATE"
     ],
-    "family": "",
-    "containerDefinitions": [
-        {
-            "name": "",
-            "image": "",
-            "essential": true
-        }
-    ],
-    "volumes": [],
-    "networkMode": "awsvpc",
-    "memory": "3 GB",
-    "cpu": "1 vCPU",
-    "executionRoleArn": "arn:aws:iam::950742489845:role/ecsTaskExecutionRole"
+    "cpu": "1024",
+    "memory": "3072",
+    "runtimePlatform": {
+        "cpuArchitecture": "X86_64",
+        "operatingSystemFamily": "LINUX"
+    },
+    "enableFaultInjection": false
 }
