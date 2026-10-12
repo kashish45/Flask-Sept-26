@@ -1,0 +1,31 @@
+
+# Python virtual environments
+mlops_env/
+venv/
+.venv/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Git files
+.git/
+.gitignore
+
+# Environment variables and secrets
+.env
+.env.*
+
+# Editor and operating system files
+.vscode/
+.DS_Store
+
+# Test and coverage artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local Python package artifacts
+*.egg-info/
+build/
+dist/
