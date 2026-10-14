@@ -1,0 +1,23 @@
+artifact_path: /Users/thekashishbhagat/Documents/scaler/batches/Flask-Apr-26/Flask-Sept-26/mlruns/1/models/m-02781c40a4de4d849471e238bdf780c8/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.14.6
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: pickle
+    sklearn_version: 1.9.1
+    skops_trusted_types: null
+mlflow_version: 3.17.1
+model_id: m-02781c40a4de4d849471e238bdf780c8
+model_size_bytes: 234177
+model_uuid: m-02781c40a4de4d849471e238bdf780c8
+prompts: null
+run_id: a932cd2ba7474222b9b9d834bacade98
+utc_time_created: '2026-10-14 08:28:14.376872'
